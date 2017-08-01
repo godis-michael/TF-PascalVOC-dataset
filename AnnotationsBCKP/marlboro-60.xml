@@ -1,0 +1,26 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>marlboro-60.jpg</filename>
+	<path>/home/jun/PycharmProjects/VOCtest/VOCdevkit/VOC2012/JPEGImages/marlboro-60.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>217</width>
+		<height>232</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>marlboro</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>40</xmin>
+			<ymin>8</ymin>
+			<xmax>165</xmax>
+			<ymax>227</ymax>
+		</bndbox>
+	</object>
+</annotation>
