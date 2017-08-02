@@ -7,8 +7,8 @@
 <database>The VOC2012 Database</database>
 </source>
 <size>
-<width>225</width>
-<height>225</height>
+<width>500</width>
+<height>375</height>
 <depth>3</depth>
 </size>
 <segmented>0</segmented>
@@ -18,10 +18,22 @@
 <truncated>0</truncated>
 <difficult>0</difficult>
 <bndbox>
-<xmin>50</xmin>
-<ymin>13</ymin>
-<xmax>178</xmax>
-<ymax>211</ymax>
+<xmin>91</xmin>
+<ymin>15</ymin>
+<xmax>300</xmax>
+<ymax>367</ymax>
+</bndbox>
+</object>
+<object>
+<name>marlboro</name>
+<pose>Unspecified</pose>
+<truncated>1</truncated>
+<difficult>0</difficult>
+<bndbox>
+<xmin>308</xmin>
+<ymin>78</ymin>
+<xmax>500</xmax>
+<ymax>360</ymax>
 </bndbox>
 </object>
 </annotation>

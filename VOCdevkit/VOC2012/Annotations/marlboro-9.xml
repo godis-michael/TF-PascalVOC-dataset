@@ -7,8 +7,8 @@
 <database>The VOC2012 Database</database>
 </source>
 <size>
-<width>194</width>
-<height>260</height>
+<width>500</width>
+<height>719</height>
 <depth>3</depth>
 </size>
 <segmented>0</segmented>
@@ -18,10 +18,10 @@
 <truncated>0</truncated>
 <difficult>0</difficult>
 <bndbox>
-<xmin>5</xmin>
-<ymin>6</ymin>
-<xmax>189</xmax>
-<ymax>253</ymax>
+<xmin>85</xmin>
+<ymin>158</ymin>
+<xmax>403</xmax>
+<ymax>568</ymax>
 </bndbox>
 </object>
 </annotation>

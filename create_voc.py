@@ -31,7 +31,6 @@ def create_tree(path):
                     break
                 else:
                     raise ValueError('Possible choices are yes-\'y\' or no-\'n\'')
-                    break
 
 # create_tree('')
 
@@ -48,7 +47,7 @@ def prepare_images_and_create_train_and_val_sets(path):
             for image in os.listdir(images_dir):
                 image_name = class_name + '-' + str(index)
                 os.rename(images_dir + image, JPEGImages + image_name + '.jpg')
-                if index <= round(amount/2, 0):
+                if index <= int(round((amount*2)/3, 0)):
                     with open(ImageSets + 'Main/' + model_class + '_train.txt', 'a') as f:
                         f.write(image_name + ' 1\n')
                     with open(ImageSets + 'Main/' + 'train.txt', 'a') as f:
@@ -80,7 +79,7 @@ def add_negatives(path):
         # img = img.resize((basewidth, hsize), Image.ANTIALIAS)
         # img.save(JPEGImages + image_name + '.jpg')
         os.rename(negatives_dir + image,  JPEGImages + image_name + '.jpg')
-        if index <= round(amount / 2, 0):
+        if index <= int(round((amount*2)/3, 0)):
             for file in train:
                 with open(file, 'a') as f:
                     f.write(image_name + ' -1\n')
@@ -109,7 +108,8 @@ def change_folder_in_xml(path):
             soup = BeautifulSoup(f, 'xml')
             folder, database = soup.folder, soup.database
             folder.string, database.string = 'VOC2012', 'The VOC2012 Database'
-            soup.path.decompose()
+            if soup.path:
+                soup.path.decompose()
             f.seek(0)
             f.truncate()
             f.write(str(soup))
